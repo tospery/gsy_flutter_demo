@@ -48,8 +48,10 @@ class _CustomMultiRenderDemoPageState extends State<CustomMultiRenderDemoPage> {
       ),
       persistentFooterButtons: <Widget>[
         TextButton(
-          style: TextButton.styleFrom(
-            backgroundColor: Colors.amberAccent,
+          style: ButtonStyle(
+            backgroundColor: ButtonStyleButton.allOrNull<Color>(
+                Colors.amberAccent,
+            ),
           ),
           onPressed: () {
             setState(() {
@@ -62,7 +64,11 @@ class _CustomMultiRenderDemoPageState extends State<CustomMultiRenderDemoPage> {
           ),
         ),
         TextButton(
-          style: TextButton.styleFrom(backgroundColor: Colors.indigoAccent),
+          style: ButtonStyle(
+            backgroundColor: ButtonStyleButton.allOrNull<Color>(
+              Colors.indigoAccent,
+            ),
+          ),
           onPressed: () {
             setState(() {
               if (customLayoutId.length > 1) {

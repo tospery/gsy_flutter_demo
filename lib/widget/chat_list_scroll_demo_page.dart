@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 ///聊天列表，添加旧数据和新数据的时候不会导致列表跳动，首尾添加数据不会抖动

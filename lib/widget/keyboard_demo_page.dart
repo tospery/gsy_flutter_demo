@@ -70,10 +70,6 @@ class _KeyBoardDemoPageState extends State<KeyBoardDemoPage> {
                     margin: EdgeInsets.symmetric(horizontal: 10),
                     child: new TextField(
                       focusNode: _focusNode,
-                      maxLines: 7,
-                      minLines: 1,
-                      decoration:
-                          const InputDecoration(border: OutlineInputBorder()),
                     ),
                   ),
                 )
@@ -104,14 +100,14 @@ class _KeyboardDetectorState extends State<KeyboardDetector>
     with WidgetsBindingObserver {
   @override
   void initState() {
-    WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance!.addObserver(this);
     super.initState();
   }
 
   @override
   void didChangeMetrics() {
     super.didChangeMetrics();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
       setState(() {
         widget.keyboardShowCallback
             ?.call(MediaQuery.of(context).viewInsets.bottom > 0);
@@ -121,7 +117,7 @@ class _KeyboardDetectorState extends State<KeyboardDetector>
 
   @override
   void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
+    WidgetsBinding.instance!.removeObserver(this);
     super.dispose();
   }
 

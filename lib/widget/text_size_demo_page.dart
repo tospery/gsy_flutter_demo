@@ -16,7 +16,7 @@ class _TextSizeDemoPageState extends State<TextSizeDemoPage> {
   @override
   Widget build(BuildContext context) {
     return MediaQuery(
-        data: MediaQueryData.fromWindow(WidgetsBinding.instance.window)
+        data: MediaQueryData.fromWindow(WidgetsBinding.instance!.window)
             .copyWith(textScaleFactor: textScaleFactor),
         child: Scaffold(
           appBar: AppBar(
@@ -49,8 +49,11 @@ class _TextSizeDemoPageState extends State<TextSizeDemoPage> {
                             });
                           }
                         },
-                        style: TextButton.styleFrom(
-                            backgroundColor: Colors.redAccent),
+                        style: ButtonStyle(
+                          backgroundColor: ButtonStyleButton.allOrNull<Color>(
+                            Colors.redAccent,
+                          ),
+                        ),
                         child: new Text("-"),
                       ),
                       new SizedBox(
@@ -62,8 +65,11 @@ class _TextSizeDemoPageState extends State<TextSizeDemoPage> {
                             textScaleFactor++;
                           });
                         },
-                        style: TextButton.styleFrom(
-                            backgroundColor: Colors.greenAccent),
+                        style: ButtonStyle(
+                          backgroundColor: ButtonStyleButton.allOrNull<Color>(
+                            Colors.greenAccent,
+                          ),
+                        ),
                         child: new Text("+"),
                       )
                     ],
