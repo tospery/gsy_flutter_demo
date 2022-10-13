@@ -1,9 +1,7 @@
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 
 class _LinkSliverHeader extends SingleChildRenderObjectWidget {
   const _LinkSliverHeader({
@@ -107,8 +105,7 @@ class _RenderCustomSliver extends RenderSliver
     assert(constraints.axisDirection == AxisDirection.down);
     assert(constraints.growthDirection == GrowthDirection.forward);
     double layoutExtent = (_hasLayoutExtent ? 1.0 : 0.0) * _containerExtent;
-    if (_hasLayoutExtent == false &&
-        _initLayoutExtent > 0) {
+    if (_hasLayoutExtent == false && _initLayoutExtent > 0) {
       layoutExtent += _initLayoutExtent;
     }
 

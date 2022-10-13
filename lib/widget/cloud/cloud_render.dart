@@ -1,6 +1,5 @@
 import 'dart:math' as math;
 
-import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 ///CloudWidget RenderBox
@@ -58,7 +57,8 @@ class RenderCloudWidget extends RenderBox
     }
 
     do {
-      RenderCloudParentData childParentData = child!.parentData as RenderCloudParentData;
+      RenderCloudParentData childParentData =
+          child!.parentData as RenderCloudParentData;
       if (rect.overlaps(childParentData.content)) {
         return true;
       }
@@ -95,7 +95,8 @@ class RenderCloudWidget extends RenderBox
       var curIndex = -1;
 
       ///提出数据
-      final RenderCloudParentData childParentData = child.parentData as RenderCloudParentData;
+      final RenderCloudParentData childParentData =
+          child.parentData as RenderCloudParentData;
 
       child.layout(constraints, parentUsesSize: true);
 
@@ -152,7 +153,8 @@ class RenderCloudWidget extends RenderBox
     var transCenter = contentCenter - recordRectCenter;
     child = firstChild;
     while (child != null) {
-      final RenderCloudParentData childParentData = child.parentData as RenderCloudParentData;
+      final RenderCloudParentData childParentData =
+          child.parentData as RenderCloudParentData;
       childParentData.offset += transCenter;
       child = childParentData.nextSibling;
     }
@@ -184,7 +186,8 @@ class RenderCloudWidget extends RenderBox
 
   @override
   bool hitTestChildren(HitTestResult result, {required Offset position}) {
-    return defaultHitTestChildren(result as BoxHitTestResult, position: position);
+    return defaultHitTestChildren(result as BoxHitTestResult,
+        position: position);
   }
 }
 

@@ -1,7 +1,6 @@
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'drop_select_controller.dart';
 import 'drop_select_object.dart';
@@ -64,13 +63,13 @@ class _MenuListGridState<T extends DropSelectObject>
 
           return new InkWell(
             onTap: () {
-
               ///是否单选
               if (widget.singleSelected) {
                 data.children.forEach((item) {
                   item.selected = false;
                 });
               }
+
               ///是否为冲突选择item
               if (child.selectedCleanOther) {
                 data.children.forEach((item) {

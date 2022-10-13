@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 import 'cloud_widget.dart';
 
@@ -11,7 +9,6 @@ class CloudDemoPage extends StatefulWidget {
 }
 
 class _CloudDemoPageState extends State<CloudDemoPage> {
-
   ///Item数据
   List<CloudItemData> dataList = const <CloudItemData>[
     CloudItemData('CloudGSY11111', Colors.amberAccent, 10, false),
