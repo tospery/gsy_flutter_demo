@@ -5,7 +5,8 @@ import 'package:matrix_gesture_detector/matrix_gesture_detector.dart';
 
 class MatrixCustomPainterDemo extends StatefulWidget {
   @override
-  _MatrixCustomPainterDemoState createState() => _MatrixCustomPainterDemoState();
+  _MatrixCustomPainterDemoState createState() =>
+      _MatrixCustomPainterDemoState();
 }
 
 class _MatrixCustomPainterDemoState extends State<MatrixCustomPainterDemo> {
@@ -52,7 +53,7 @@ class TestCustomPainter extends CustomPainter {
     shapesPaint.style = PaintingStyle.stroke;
     ui.ParagraphBuilder builder = ui.ParagraphBuilder(ui.ParagraphStyle(
       textAlign: TextAlign.center,
-      fontSize: Theme.of(context).textTheme.headline3!.fontSize! *
+      fontSize: Theme.of(context).textTheme.headlineMedium!.fontSize! *
           MediaQuery.of(context).textScaleFactor,
     ))
       ..pushStyle(ui.TextStyle(

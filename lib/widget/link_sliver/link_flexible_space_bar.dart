@@ -13,7 +13,7 @@ class LinkFlexibleSpaceBar extends StatefulWidget {
     this.titlePadding,
     this.collapseMode = CollapseMode.parallax,
     this.stretchModes = const <StretchMode>[StretchMode.zoomBackground],
-  })  : super(key: key);
+  }) : super(key: key);
 
   final Widget? title;
 
@@ -164,7 +164,7 @@ class _LinkFlexibleSpaceBarState extends State<LinkFlexibleSpaceBar> {
 
         final double opacity = settings.toolbarOpacity;
         if (opacity > 0.0) {
-          TextStyle titleStyle = theme.primaryTextTheme.headline6!;
+          TextStyle titleStyle = theme.primaryTextTheme.headlineMedium!;
           titleStyle = titleStyle.copyWith(
               color: titleStyle.color!.withOpacity(opacity));
           final bool effectiveCenterTitle = _getEffectiveCenterTitle(theme)!;

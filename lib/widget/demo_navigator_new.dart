@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class Book {
   final String title;
   final String author;
@@ -17,7 +15,7 @@ class BooksApp extends StatefulWidget {
 class _BooksAppState extends State<BooksApp> {
   BookRouterDelegate _routerDelegate = BookRouterDelegate();
   BookRouteInformationParser _routeInformationParser =
-  BookRouteInformationParser();
+      BookRouteInformationParser();
 
   @override
   Widget build(BuildContext context) {
@@ -231,8 +229,10 @@ class BookDetailsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             if (book != null) ...[
-              Text(book!.title, style: Theme.of(context).textTheme.headline6),
-              Text(book!.author, style: Theme.of(context).textTheme.subtitle1),
+              Text(book!.title,
+                  style: Theme.of(context).textTheme.headlineMedium),
+              Text(book!.author,
+                  style: Theme.of(context).textTheme.headlineSmall),
             ],
           ],
         ),
@@ -252,4 +252,3 @@ class UnknownScreen extends StatelessWidget {
     );
   }
 }
-
